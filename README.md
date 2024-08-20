@@ -1,37 +1,28 @@
-
 ## **Frappe Library Backend**
 
 Backend system developed in Django REST Framework for Library Management Assignment.
 
 ## **Hosting**
-The application has been hosted on Pythonanywhere and has url: https://cap26.pythonanywhere.com/
+The application has been hosted on Pythonanywhere and can be accessed at [https://cap26.pythonanywhere.com/](https://cap26.pythonanywhere.com/).
 
 - However, the Frappe API is not whitelisted in Pythonanywhere which is causing ProxyError. 
-- Thus, the React application can not be connected to Live API. 
-- To run on Local, please clone the "local" branch of the repo. API Endpoints have been provided in lower sections.
-## ***Models Created***
-
-I created following models to facilitate the requirements:
-- Members
-- IssuedBooks
-- BookStock
-## **Frappe Library Backend**
-
-Backend system developed in Django REST Framework for Library Management Assignment.
+- Thus, the React application cannot be connected to the live API. 
+- To run locally, please clone the "local" branch of the repo. API Endpoints have been provided in the lower sections.
 
 ## ***Models Created***
 
-I created following models to facilitate the requirements:
+I created the following models to facilitate the requirements:
 - Members
 - IssuedBooks
 - BookStock
+
 ## ***APIs Created***
 
-Following APIs were created for Front-end to interact with the models in various ways and for various react components:
+Following APIs were created for the front-end to interact with the models in various ways and for various React components:
 
 ## *1. BooksListAPI*
 
-### *GET /api/books-list/*
+### *GET /books/*
 
 Fetches a list of books from an external API and returns a fixed count of records. Determines if a book is 'Issued' or 'Available'.
 
@@ -52,7 +43,7 @@ Fetches a list of books from an external API and returns a fixed count of record
 
 ## *2. MembersAPI*
 
-### *GET /api/members/*
+### *GET /members/*
 
 Returns a list of member objects, optionally limited by the `count` parameter.
 
@@ -69,7 +60,7 @@ Returns a list of member objects, optionally limited by the `count` parameter.
   - `joining_date`
   - `end_date`
 
-### *POST /api/members/*
+### *POST /members/*
 
 Creates a new member object.
 
@@ -87,7 +78,7 @@ Creates a new member object.
 
 ## *3. MembersPageAPI*
 
-### *GET /api/members-page/*
+### *GET /members_page/*
 
 Fetches members with pagination.
 
@@ -105,7 +96,7 @@ Fetches members with pagination.
 
 ## *4. IssuedBooksListAPI*
 
-### *GET /api/issued-books-list/*
+### *GET /issued_books_list/*
 
 Fetches a list of issued books, optionally limited by the `count` parameter.
 
@@ -124,7 +115,7 @@ Fetches a list of issued books, optionally limited by the `count` parameter.
 
 ## *5. IssuedBooksAPI*
 
-### *GET /api/issued-books/*
+### *GET /issued_books/*
 
 Fetches details of a specific issued book by its `book_id`.
 
@@ -137,7 +128,7 @@ Fetches details of a specific issued book by its `book_id`.
 - `status: 404 Not Found` if the book is not issued.
 - **Body:** Error message.
 
-### *POST /api/issued-books/*
+### *POST /issued_books/*
 
 Creates a new issued book record.
 
@@ -153,7 +144,7 @@ Creates a new issued book record.
 - `status: 400 Bad Request` on error.
 - **Body:** Validation errors.
 
-### *PUT /api/issued-books/*
+### *PUT /issued_books/*
 
 Updates the status of an issued book to 'Returned'.
 
@@ -168,7 +159,7 @@ Updates the status of an issued book to 'Returned'.
 
 ## *6. OverDueBookList*
 
-### *GET /api/overdue-book-list/*
+### *GET /overdue_book_list/*
 
 Fetches a list of overdue books and calculates the fines.
 
@@ -188,7 +179,7 @@ Fetches a list of overdue books and calculates the fines.
 
 ## *7. SettleMemberDebtAPI*
 
-### *GET /api/settle-member-debt/*
+### *GET /settle_member_debt/*
 
 Settles the outstanding debt for a specific member.
 
@@ -203,7 +194,7 @@ Settles the outstanding debt for a specific member.
 
 ## *8. StatisticsAPI*
 
-### *GET /api/statistics/*
+### *GET /statistics/*
 
 Fetches various statistics related to members and books.
 
