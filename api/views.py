@@ -128,7 +128,7 @@ class IssuedBooksAPI(APIView):
         if not book_id:
             return Response({'message': 'Book Id is requried'})
 
-        issued_book = IssuedBooks.objects.filter(book_id = book_id).first()
+        issued_book = IssuedBooks.objects.filter(book_id = book_id, status="Issued").first()
 
         if not issued_book:
             return Response({'message': 'Book not issued yet'}, status=status.HTTP_404_NOT_FOUND)
