@@ -45,7 +45,7 @@ class BooksListAPI(APIView):
                     return Response({'error': 'Failed to fetch data'}, status=status.HTTP_400_BAD_REQUEST)
             except Exception as e:
 
-                return Response({'error': 'Failed to fetch data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                return Response({'error': e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return Response(books[:count], status=status.HTTP_200_OK)
 
