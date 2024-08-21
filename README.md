@@ -16,6 +16,13 @@ I created the following models to facilitate the requirements:
 - IssuedBooks
 - BookStock
 
+## **APIs Screenshots**
+
+-   ![BooksAPI](images/books.PNG)
+-   ![MembersAPI](images/members.PNG)
+-   ![IssuedBooksAPI](images/issued_books.PNG)
+-   ![StatisticsAPI](images/statistics.PNG)
+
 ## ***APIs Created***
 
 Following APIs were created for the front-end to interact with the models in various ways and for various React components:
