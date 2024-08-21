@@ -17,7 +17,7 @@ class BooksListAPI(APIView):
         authors = request.GET.get('authors')
         url = "https://frappe.io/api/method/frappe-library"
         books = []
-        max_pages = 10  # Limit to prevent infinite loops
+        max_pages = 200  # Limit to prevent infinite loops
 
         while len(books) < count and page <= max_pages:
             params = {'page': page}
@@ -166,6 +166,10 @@ class IssuedBooksAPI(APIView):
             rent_days = 1
 
         member.outstanding_debt += (rent_days*10)
+        issued_book.overdue = (today - issued_book.return_date).days
+        issued_book.fine = issued_book.overdue * 20
+        member.outstanding_debt += issued_book.fine
+        
         member.save()
         issued_book.status = 'Returned'
         issued_book.save()
