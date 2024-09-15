@@ -1,4 +1,4 @@
-## **Library Management Systen Backend**
+## **Library Management System Backend**
 
 Backend system developed in Django REST Framework for Library Management Assignment.
 
