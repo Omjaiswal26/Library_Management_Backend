@@ -1,12 +1,10 @@
-## **Frappe Library Backend**
+## **Library Management Systen Backend**
 
 Backend system developed in Django REST Framework for Library Management Assignment.
 
 ## **Hosting**
 The application has been hosted on Pythonanywhere and can be accessed at [https://cap26.pythonanywhere.com/](https://cap26.pythonanywhere.com/).
 
-- However, the Frappe API is not whitelisted in Pythonanywhere which is causing ProxyError. 
-- Thus, the React application cannot be connected to the live API. 
 - To run locally, please clone the "local" branch of the repo. API Endpoints have been provided in the lower sections.
 
 ## ***Models Created***
